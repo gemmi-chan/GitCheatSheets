@@ -93,11 +93,15 @@ vi 编辑，insert 键，Esc到页尾，输入冒号：wq.
 
 ### 远程仓库
 
+先不要添加一个新的远程仓库。
+
 配置SSH公钥
 
-`ssh-keygen -t rsa` 生成SSH公钥，不断回车，如果公钥已经存在，则自动覆盖。
+`ssh-keygen -t rsa -C "email_name@email.com"` 生成SSH公钥，不断回车，如果公钥已经存在，则自动覆盖。
 
 `cat ~/.ssh/id_rsa.pub` 获取公钥
+
+文件id_rsa.pub路径C:\Users\Administrator\.ssh，也可以手动复制，将SSH公钥添加到github的Settings->SSH and GPG Keys
 
 `ssh -T git@github.com` 验证是否配置成功
 
