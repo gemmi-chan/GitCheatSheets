@@ -144,3 +144,17 @@ vi 编辑，insert 键，Esc到页尾，输入冒号：wq.
 如果不指定远端名称和分支名，则抓取所有并更新当前分支。
 
 只去执行抓取命令 `git fetch`，本地仓库是没有远程仓库来的内容的
+
+### 重新配置远程仓库
+
+`git remote rm origin` # 移除远程仓库
+
+`git remote add origin git@github.com:` # 添加远程仓库
+
+`git remote -v` # 查看远程仓库
+
+或者打开项目目录的.git/config文件，
+
+找到旧配置进行修改
+
+[remote ' origin ' ] URL=旧链接修改为：[remote ' origin ' ] URL=新连接
